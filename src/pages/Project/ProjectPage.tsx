@@ -12,6 +12,7 @@ import { useParams } from "react-router";
 import { useRootStore } from "../../app/use-root-store";
 import { OoFormLaunch } from "../../features/buy-oo-launch";
 import { CrcFormLaunch } from "../../features/buy-crc-launch";
+import { ARAFormSwap } from "../../features/swap-ara-launch";
 
 export const ProjectPage: FC = () => {
   const params = useParams();
@@ -38,6 +39,7 @@ export const ProjectPage: FC = () => {
       {params.symbol === 'omAra' && <ARAFormLaunch />}
       {params.symbol === 'omOo' && <OoFormLaunch />}
       {params.symbol === 'omCrc' && <CrcFormLaunch />}
+      {params.symbol === 'AG' && <ARAFormSwap />}
     </div>
   );
 };

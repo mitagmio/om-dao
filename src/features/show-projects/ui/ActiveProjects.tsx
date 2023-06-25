@@ -10,6 +10,7 @@ export const ActiveProjects: FC = () => {
       <Project title={TOKEN_TITLE[TOKEN_SYMBOLS.TIGR]} symbol={TOKEN_SYMBOLS.TIGR} href={TOKEN_HREF[TOKEN_SYMBOLS.TIGR]} />
       <Project title={TOKEN_TITLE[TOKEN_SYMBOLS.LED]} symbol={TOKEN_SYMBOLS.LED} href={TOKEN_HREF[TOKEN_SYMBOLS.LED]} />
       <Project title={TOKEN_TITLE[TOKEN_SYMBOLS.Crc]} symbol={TOKEN_SYMBOLS.Crc} href={TOKEN_HREF[TOKEN_SYMBOLS.Crc]} />
+      <Project title={TOKEN_TITLE[TOKEN_SYMBOLS.ARAORIG]} symbol={TOKEN_SYMBOLS.ARAORIG} href={TOKEN_HREF[TOKEN_SYMBOLS.ARAORIG]} />
     </div>
   );
 };
