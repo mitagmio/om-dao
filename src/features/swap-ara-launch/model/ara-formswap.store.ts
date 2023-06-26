@@ -41,13 +41,17 @@ export class ARAFormSwapStore {
     private init = async (): Promise<void> => {
         try {
             const bytes32Symbol = formatBytes32String(TOKEN_SYMBOLS.ARA);
+
             const bigNumber = await this.swapContract.mySwapPrice(
                 bytes32Symbol
             );
+
             this._exchangeRate = +formatUnits(bigNumber, "6");
+
             const bytes32SymbolTO = await this.swapContract.getSwapPair(
                 bytes32Symbol
             );
+
             const maxCount = await this.swapContract.getSwapTokensUnlocked(
                 bytes32SymbolTO,
                 this._accountAddress
@@ -55,7 +59,7 @@ export class ARAFormSwapStore {
 
             this._maxCount = formatUnits(
                 maxCount,
-                await this.destinationContract.decimals()
+                await this.sourceContract.decimals()
             );
         } catch (e) {
             console.log(e);
@@ -148,13 +152,15 @@ export class ARAFormSwapStore {
     }
 
     public getupdateMaxCount = async () => {
-        const maxCount = await this.destinationContract.balanceOf(
-            this.swapContract.address
+
+        const maxCount = await this.swapContract.getSwapTokensUnlocked(
+            formatBytes32String(TOKEN_SYMBOLS.ARAORIG),
+            this._accountAddress
         );
 
         const maxsCount = formatUnits(
             maxCount,
-            await this.destinationContract.decimals()
+            await this.sourceContract.decimals()
         );
 
         return maxsCount;

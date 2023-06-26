@@ -185,7 +185,7 @@ export const BaseTokensForm: FC<BaseTokensFormProps> = observer(
       }
 
       return maxiCount
-        ? (+maxiCount * +destinationAmountForOneToken).toFixed(1)
+        ? (+maxiCount * +destinationAmountForOneToken).toFixed(6)
         : undefined;
     }, [maxiCount, calculateDestinationAmount, isRearranged]);
 
