@@ -13,6 +13,8 @@ import { useRootStore } from "../../app/use-root-store";
 import { OoFormLaunch } from "../../features/buy-oo-launch";
 import { CrcFormLaunch } from "../../features/buy-crc-launch";
 import { ARAFormSwap } from "../../features/swap-ara-launch";
+import { FPFormLaunch } from "../../features/buy-fp-launch";
+import { DBFormLaunch } from "../../features/buy-db-launch";
 
 export const ProjectPage: FC = () => {
   const params = useParams();
@@ -40,6 +42,8 @@ export const ProjectPage: FC = () => {
       {params.symbol === 'omOo' && <OoFormLaunch />}
       {params.symbol === 'omCrc' && <CrcFormLaunch />}
       {params.symbol === 'AG' && <ARAFormSwap />}
+      {params.symbol === 'omFP' && <FPFormLaunch />}
+      {params.symbol === 'omDB' && <DBFormLaunch />}
     </div>
   );
 };

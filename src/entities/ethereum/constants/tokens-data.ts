@@ -24,6 +24,8 @@ export enum TOKEN_SYMBOLS {
     ARAORIG = "AG",
     Oo = "omOo",
     Crc = "omCrc",
+    FP = "omFP",
+    DB = "omDB",
 }
 
 export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
@@ -72,6 +74,12 @@ export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
     [TOKEN_SYMBOLS.Crc]: isProd()
         ? "0xFC6493F0bcF60F086a83b09cF707C9a09Df16498"
         : "0xFC6493F0bcF60F086a83b09cF707C9a09Df16498",
+    [TOKEN_SYMBOLS.FP]: isProd()
+        ? "0x704051Da215FCD770fE55995b9e661eb6c9B88da"
+        : "0x704051Da215FCD770fE55995b9e661eb6c9B88da",
+    [TOKEN_SYMBOLS.DB]: isProd()
+        ? "0xaa51235532f7aF306233F40AFE166C9d550144d3"
+        : "0xaa51235532f7aF306233F40AFE166C9d550144d3",
 };
 
 export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
@@ -90,6 +98,8 @@ export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
     [TOKEN_SYMBOLS.ARAORIG]: ARADENA_TOKEN_ABI,
     [TOKEN_SYMBOLS.Oo]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.Crc]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.FP]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.DB]: WRAPPED_TOKEN_ABI,
 };
 
 export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
@@ -108,6 +118,8 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.ARAORIG]: "Aradenean Gold",
     [TOKEN_SYMBOLS.Oo]: "OM DAO Wrapped omOo",
     [TOKEN_SYMBOLS.Crc]: "OM DAO Wrapped Crecy",
+    [TOKEN_SYMBOLS.FP]: "OM DAO Wrapped FlexPort",
+    [TOKEN_SYMBOLS.DB]: "OM DAO Wrapped deBridge",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
@@ -126,6 +138,8 @@ export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.ARAORIG]: "18",
     [TOKEN_SYMBOLS.Oo]: "6",
     [TOKEN_SYMBOLS.Crc]: "6",
+    [TOKEN_SYMBOLS.FP]: "6",
+    [TOKEN_SYMBOLS.DB]: "6",
 };
 
 export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
@@ -154,6 +168,8 @@ export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.Oo]: "https://youtu.be/NNS2NnZ67xs",
     [TOKEN_SYMBOLS.Crc]:
         "https://selectedpublic.notion.site/Crecy-da12da0f0086482299a5cdf141ffc1a7",
+    [TOKEN_SYMBOLS.FP]: "https://t.me/c/1802432571/432",
+    [TOKEN_SYMBOLS.DB]: "https://t.me/c/1802432571/439",
 };
 
 export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
@@ -172,4 +188,6 @@ export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.ARAORIG]: "Aradenean Gold",
     [TOKEN_SYMBOLS.Oo]: "Oo",
     [TOKEN_SYMBOLS.Crc]: "Crecy",
+    [TOKEN_SYMBOLS.FP]: "Flexport",
+    [TOKEN_SYMBOLS.DB]: "deBridge",
 };
