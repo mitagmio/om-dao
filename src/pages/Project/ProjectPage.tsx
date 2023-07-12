@@ -15,6 +15,7 @@ import { CrcFormLaunch } from "../../features/buy-crc-launch";
 import { ARAFormSwap } from "../../features/swap-ara-launch";
 import { FPFormLaunch } from "../../features/buy-fp-launch";
 import { DBFormLaunch } from "../../features/buy-db-launch";
+import { CRDFormLaunch } from "../../features/buy-crd-launch";
 
 export const ProjectPage: FC = () => {
   const params = useParams();
@@ -44,6 +45,7 @@ export const ProjectPage: FC = () => {
       {params.symbol === 'AG' && <ARAFormSwap />}
       {params.symbol === 'omFP' && <FPFormLaunch />}
       {params.symbol === 'omDB' && <DBFormLaunch />}
+      {params.symbol === 'omCRD' && <CRDFormLaunch />}
     </div>
   );
 };

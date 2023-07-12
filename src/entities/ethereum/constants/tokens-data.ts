@@ -26,6 +26,7 @@ export enum TOKEN_SYMBOLS {
     Crc = "omCrc",
     FP = "omFP",
     DB = "omDB",
+    CRD = "omCRD",
 }
 
 export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
@@ -80,6 +81,9 @@ export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
     [TOKEN_SYMBOLS.DB]: isProd()
         ? "0xaa51235532f7aF306233F40AFE166C9d550144d3"
         : "0xaa51235532f7aF306233F40AFE166C9d550144d3",
+    [TOKEN_SYMBOLS.CRD]: isProd()
+        ? "0x1370b77905a023813Aa38cDCb2213393ECdD363c"
+        : "0x1370b77905a023813Aa38cDCb2213393ECdD363c",
 };
 
 export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
@@ -100,6 +104,7 @@ export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
     [TOKEN_SYMBOLS.Crc]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.FP]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.DB]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.CRD]: WRAPPED_TOKEN_ABI,
 };
 
 export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
@@ -120,6 +125,7 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.Crc]: "OM DAO Wrapped Crecy",
     [TOKEN_SYMBOLS.FP]: "OM DAO Wrapped FlexPort",
     [TOKEN_SYMBOLS.DB]: "OM DAO Wrapped deBridge",
+    [TOKEN_SYMBOLS.CRD]: "OM DAO Wrapped Credora",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
@@ -140,6 +146,7 @@ export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.Crc]: "6",
     [TOKEN_SYMBOLS.FP]: "6",
     [TOKEN_SYMBOLS.DB]: "6",
+    [TOKEN_SYMBOLS.CRD]: "6",
 };
 
 export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
@@ -170,6 +177,7 @@ export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
         "https://selectedpublic.notion.site/Crecy-da12da0f0086482299a5cdf141ffc1a7",
     [TOKEN_SYMBOLS.FP]: "https://t.me/c/1802432571/432",
     [TOKEN_SYMBOLS.DB]: "https://t.me/c/1802432571/439",
+    [TOKEN_SYMBOLS.CRD]: "https://t.me/c/1802432571/522",
 };
 
 export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
@@ -190,4 +198,5 @@ export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.Crc]: "Crecy",
     [TOKEN_SYMBOLS.FP]: "Flexport",
     [TOKEN_SYMBOLS.DB]: "deBridge",
+    [TOKEN_SYMBOLS.CRD]: "Credora",
 };
