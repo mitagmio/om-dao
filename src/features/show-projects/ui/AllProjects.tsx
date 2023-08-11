@@ -7,46 +7,46 @@ import { ArchiveProjects } from "./ArchiveProjects";
 import { useTranslation } from "react-i18next";
 
 const COMPONENT_BY_ACTIVE_TAB: Record<TProjectsPageTabs, FunctionComponent> = {
-  activeProjects: ActiveProjects,
-  waitListing: WaitingProjects,
-  archive: ArchiveProjects,
+    activeProjects: ActiveProjects,
+    waitListing: WaitingProjects,
+    archive: ArchiveProjects,
 };
 
 export const AllProjects: FC = () => {
-  const { t } = useTranslation();
-  const [activeTab, setActiveTab] =
-    useState<TProjectsPageTabs>("activeProjects");
+    const { t } = useTranslation();
+    const [activeTab, setActiveTab] =
+        useState<TProjectsPageTabs>("activeProjects");
 
-  const Component = COMPONENT_BY_ACTIVE_TAB[activeTab];
+    const Component = COMPONENT_BY_ACTIVE_TAB[activeTab];
 
-  const tabs: ITabProps[] = useMemo(() => {
-    return [
-      {
-        label: t("common.projectsPage.active"),
-        key: "activeProjects",
-      },
-      {
-        label: t("common.projectsPage.waiting"),
-        key: "waitListing",
-      },
-      {
-        label: t("common.projectsPage.archive"),
-        key: "archive",
-        disabled: true,
-        title: "Нет архивных проектов",
-      },
-    ];
-  }, [t]);
+    const tabs: ITabProps[] = useMemo(() => {
+        return [
+            {
+                label: t("common.projectsPage.active"),
+                key: "activeProjects",
+            },
+            {
+                label: t("common.projectsPage.waiting"),
+                key: "waitListing",
+            },
+            {
+                label: t("common.projectsPage.archive"),
+                key: "archive",
+            },
+        ];
+    }, [t]);
 
-  return (
-    <div>
-      <Tabs
-        className="mb-4"
-        activeKey={activeTab}
-        onChange={(key: string) => setActiveTab(key as TProjectsPageTabs)}
-        items={tabs}
-      />
-      <Component />
-    </div>
-  );
+    return (
+        <div>
+            <Tabs
+                className="mb-4"
+                activeKey={activeTab}
+                onChange={(key: string) =>
+                    setActiveTab(key as TProjectsPageTabs)
+                }
+                items={tabs}
+            />
+            <Component />
+        </div>
+    );
 };
