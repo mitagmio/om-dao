@@ -9,11 +9,11 @@ export const ActiveProjects: FC = () => {
 
     return (
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            <Project
+            {/* <Project
                 title={TOKEN_TITLE[TOKEN_SYMBOLS.TIGR]}
                 symbol={TOKEN_SYMBOLS.TIGR}
                 href={TOKEN_HREF[TOKEN_SYMBOLS.TIGR]}
-            />
+            /> */}
             <Project
                 buttonName={t("common.swap") + " " + TOKEN_SYMBOLS.ARA + " / "}
                 title={TOKEN_TITLE[TOKEN_SYMBOLS.ARAORIG]}
