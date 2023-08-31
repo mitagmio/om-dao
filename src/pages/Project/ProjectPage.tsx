@@ -17,6 +17,7 @@ import { FPFormLaunch } from "../../features/buy-fp-launch";
 import { DBFormLaunch } from "../../features/buy-db-launch";
 import { CRDFormLaunch } from "../../features/buy-crd-launch";
 import { IIIAFormLaunch } from "../../features/buy-iiia-launch";
+import { TolWFormLaunch } from "../../features/buy-tolw-launch";
 
 export const ProjectPage: FC = () => {
     const params = useParams();
@@ -48,6 +49,7 @@ export const ProjectPage: FC = () => {
             {params.symbol === "omDB" && <DBFormLaunch />}
             {params.symbol === "omCRD" && <CRDFormLaunch />}
             {params.symbol === "omIIIA" && <IIIAFormLaunch />}
+            {params.symbol === "omTolW" && <TolWFormLaunch />}
         </div>
     );
 };

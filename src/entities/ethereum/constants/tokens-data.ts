@@ -28,6 +28,7 @@ export enum TOKEN_SYMBOLS {
     DB = "omDB",
     CRD = "omCRD",
     IIIA = "omIIIA",
+    TolW = "omTolW",
 }
 
 export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
@@ -88,6 +89,9 @@ export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
     [TOKEN_SYMBOLS.IIIA]: isProd()
         ? "0x6fB37179dd3120E86229c76639386797a23a4C11"
         : "0x6fB37179dd3120E86229c76639386797a23a4C11",
+    [TOKEN_SYMBOLS.TolW]: isProd()
+        ? "0x801663dE8867f4dB6Cf3C7E4173574de0d34d36A"
+        : "0x801663dE8867f4dB6Cf3C7E4173574de0d34d36A",
 };
 
 export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
@@ -110,6 +114,7 @@ export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
     [TOKEN_SYMBOLS.DB]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.CRD]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.IIIA]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.TolW]: WRAPPED_TOKEN_ABI,
 };
 
 export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
@@ -132,6 +137,7 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.DB]: "OM DAO Wrapped deBridge",
     [TOKEN_SYMBOLS.CRD]: "OM DAO Wrapped Credora",
     [TOKEN_SYMBOLS.IIIA]: "OM DAO Wrapped IIIA",
+    [TOKEN_SYMBOLS.TolW]: "OM DAO Wrapped Tollan Worlds",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
@@ -154,6 +160,7 @@ export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.DB]: "6",
     [TOKEN_SYMBOLS.CRD]: "6",
     [TOKEN_SYMBOLS.IIIA]: "6",
+    [TOKEN_SYMBOLS.TolW]: "6",
 };
 
 export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
@@ -186,6 +193,7 @@ export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.DB]: "https://t.me/c/1802432571/439",
     [TOKEN_SYMBOLS.CRD]: "https://t.me/c/1802432571/522",
     [TOKEN_SYMBOLS.IIIA]: "https://t.me/c/1802432571/571",
+    [TOKEN_SYMBOLS.TolW]: "https://t.me/c/1802432571/661",
 };
 
 export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
@@ -208,4 +216,5 @@ export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.DB]: "deBridge",
     [TOKEN_SYMBOLS.CRD]: "Credora",
     [TOKEN_SYMBOLS.IIIA]: "Web3Auth",
+    [TOKEN_SYMBOLS.TolW]: "Tollan Worlds",
 };
