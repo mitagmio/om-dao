@@ -131,7 +131,7 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.FP]: "OM DAO Wrapped FlexPort",
     [TOKEN_SYMBOLS.DB]: "OM DAO Wrapped deBridge",
     [TOKEN_SYMBOLS.CRD]: "OM DAO Wrapped Credora",
-    [TOKEN_SYMBOLS.IIIA]: "OM DAO Wrapped IIIA ",
+    [TOKEN_SYMBOLS.IIIA]: "OM DAO Wrapped IIIA",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
