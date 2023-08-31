@@ -30,11 +30,11 @@ export const TolWFormLaunch: FC = observer(() => {
         <>
             <BaseTokensForm
                 title={t("common.purchaseToken", {
-                    symbol: TOKEN_SYMBOLS.IIIA,
+                    symbol: TOKEN_SYMBOLS.TolW,
                 })}
                 onSubmit={onSubmit}
                 sourceContractSymbol={TOKEN_SYMBOLS.OMD}
-                destinationContractSymbol={TOKEN_SYMBOLS.IIIA}
+                destinationContractSymbol={TOKEN_SYMBOLS.TolW}
                 calculateDestinationAmount={calculateDestinationAmount}
                 swapStatus={swapStatus}
                 isLoading={isLoading}
@@ -44,10 +44,10 @@ export const TolWFormLaunch: FC = observer(() => {
             <TokenAddButton
                 className="w-full"
                 text={t("common.addToken", {
-                    symbol: TOKEN_SYMBOLS.IIIA,
+                    symbol: TOKEN_SYMBOLS.TolW,
                     walletName: "MetaMask",
                 })}
-                tokenSymbol={TOKEN_SYMBOLS.IIIA}
+                tokenSymbol={TOKEN_SYMBOLS.TolW}
             />
         </>
     );
