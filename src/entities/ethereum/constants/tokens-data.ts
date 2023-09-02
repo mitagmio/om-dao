@@ -29,6 +29,8 @@ export enum TOKEN_SYMBOLS {
     CRD = "omCRD",
     IIIA = "omIIIA",
     TolW = "omTolW",
+    WeBi = "omWeBi",
+    Def = "omDef",
 }
 
 export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
@@ -92,6 +94,12 @@ export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
     [TOKEN_SYMBOLS.TolW]: isProd()
         ? "0x801663dE8867f4dB6Cf3C7E4173574de0d34d36A"
         : "0x801663dE8867f4dB6Cf3C7E4173574de0d34d36A",
+    [TOKEN_SYMBOLS.WeBi]: isProd()
+        ? "0x0D279fcE6fce3d160092e8701556F91056b51E66"
+        : "0x0D279fcE6fce3d160092e8701556F91056b51E66",
+    [TOKEN_SYMBOLS.Def]: isProd()
+        ? "0x3837179f9BBA87483CDC9bb704FD5D38664e81D6"
+        : "0x3837179f9BBA87483CDC9bb704FD5D38664e81D6",
 };
 
 export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
@@ -115,6 +123,8 @@ export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
     [TOKEN_SYMBOLS.CRD]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.IIIA]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.TolW]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.WeBi]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.Def]: WRAPPED_TOKEN_ABI,
 };
 
 export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
@@ -138,6 +148,8 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.CRD]: "OM DAO Wrapped Credora",
     [TOKEN_SYMBOLS.IIIA]: "OM DAO Wrapped IIIA",
     [TOKEN_SYMBOLS.TolW]: "OM DAO Wrapped Tollan Worlds",
+    [TOKEN_SYMBOLS.WeBi]: "OM DAO Wrapped WeightsBiases",
+    [TOKEN_SYMBOLS.Def]: "OM DAO Wrapped Defined",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
@@ -161,6 +173,8 @@ export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.CRD]: "6",
     [TOKEN_SYMBOLS.IIIA]: "6",
     [TOKEN_SYMBOLS.TolW]: "6",
+    [TOKEN_SYMBOLS.WeBi]: "6",
+    [TOKEN_SYMBOLS.Def]: "6",
 };
 
 export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
@@ -194,6 +208,9 @@ export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.CRD]: "https://t.me/c/1802432571/522",
     [TOKEN_SYMBOLS.IIIA]: "https://t.me/c/1802432571/571",
     [TOKEN_SYMBOLS.TolW]: "https://t.me/c/1802432571/661",
+    [TOKEN_SYMBOLS.WeBi]: "https://wandb.ai/site",
+    [TOKEN_SYMBOLS.Def]:
+        "https://docs.google.com/document/d/1XOqeL_VzlXqoipe9W_FtHVzFRAwBdbfemSaCUqWENBo/edit",
 };
 
 export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
@@ -217,4 +234,6 @@ export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.CRD]: "Credora",
     [TOKEN_SYMBOLS.IIIA]: "Web3Auth",
     [TOKEN_SYMBOLS.TolW]: "Tollan Worlds",
+    [TOKEN_SYMBOLS.WeBi]: "WeightsBiases",
+    [TOKEN_SYMBOLS.Def]: "Defined",
 };
