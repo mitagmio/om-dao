@@ -75,12 +75,6 @@ export const WaitingProjects: FC = () => {
                 symbol={TOKEN_SYMBOLS.CRD}
                 href={TOKEN_HREF[TOKEN_SYMBOLS.CRD]}
             />
-            <Project
-                buttonName={t("common.show")}
-                title={TOKEN_TITLE[TOKEN_SYMBOLS.WeBi]}
-                symbol={TOKEN_SYMBOLS.WeBi}
-                href={TOKEN_HREF[TOKEN_SYMBOLS.WeBi]}
-            />
         </div>
     );
 };
