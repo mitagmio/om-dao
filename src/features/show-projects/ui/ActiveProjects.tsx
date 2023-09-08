@@ -15,11 +15,6 @@ export const ActiveProjects: FC = () => {
                 symbol={TOKEN_SYMBOLS.ARAORIG}
                 href={TOKEN_HREF[TOKEN_SYMBOLS.ARAORIG]}
             />
-            <Project
-                title={TOKEN_TITLE[TOKEN_SYMBOLS.WeBi]}
-                symbol={TOKEN_SYMBOLS.WeBi}
-                href={TOKEN_HREF[TOKEN_SYMBOLS.WeBi]}
-            />
         </div>
     );
 };
