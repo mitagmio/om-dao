@@ -19,7 +19,6 @@ import { CRDFormLaunch } from "../../features/buy-crd-launch";
 import { IIIAFormLaunch } from "../../features/buy-iiia-launch";
 import { TolWFormLaunch } from "../../features/buy-tolw-launch";
 import { WeBiFormLaunch } from "../../features/buy-webi-launch";
-import { DefFormLaunch } from "../../features/buy-def-launch";
 
 export const ProjectPage: FC = () => {
     const params = useParams();
@@ -53,7 +52,6 @@ export const ProjectPage: FC = () => {
             {params.symbol === "omIIIA" && <IIIAFormLaunch />}
             {params.symbol === "omTolW" && <TolWFormLaunch />}
             {params.symbol === "omWeBi" && <WeBiFormLaunch />}
-            {params.symbol === "omDef" && <DefFormLaunch />}
         </div>
     );
 };
