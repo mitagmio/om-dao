@@ -30,6 +30,7 @@ export enum TOKEN_SYMBOLS {
     IIIA = "omIIIA",
     TolW = "omTolW",
     WeBi = "omWeBi",
+    Zely = "omZely",
 }
 
 export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
@@ -96,6 +97,9 @@ export const TOKEN_ADDRESS: Record<TOKEN_SYMBOLS, Address> = {
     [TOKEN_SYMBOLS.WeBi]: isProd()
         ? "0x0D279fcE6fce3d160092e8701556F91056b51E66"
         : "0x0D279fcE6fce3d160092e8701556F91056b51E66",
+    [TOKEN_SYMBOLS.Zely]: isProd()
+        ? "0x3Ee0387D60c223eb1CaC64E4b8B7a54c6265fdA8"
+        : "0x3Ee0387D60c223eb1CaC64E4b8B7a54c6265fdA8",
 };
 
 export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
@@ -120,6 +124,7 @@ export const TOKEN_ABI: { [key in TOKEN_SYMBOLS]: any } = {
     [TOKEN_SYMBOLS.IIIA]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.TolW]: WRAPPED_TOKEN_ABI,
     [TOKEN_SYMBOLS.WeBi]: WRAPPED_TOKEN_ABI,
+    [TOKEN_SYMBOLS.Zely]: WRAPPED_TOKEN_ABI,
 };
 
 export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
@@ -144,6 +149,7 @@ export const TOKEN_NAME: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.IIIA]: "OM DAO Wrapped IIIA",
     [TOKEN_SYMBOLS.TolW]: "OM DAO Wrapped Tollan Worlds",
     [TOKEN_SYMBOLS.WeBi]: "OM DAO Wrapped WeightsBiases",
+    [TOKEN_SYMBOLS.Zely]: "OM DAO Wrapped Zealy",
 };
 
 export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
@@ -168,6 +174,7 @@ export const TOKEN_DECIMAL: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.IIIA]: "6",
     [TOKEN_SYMBOLS.TolW]: "6",
     [TOKEN_SYMBOLS.WeBi]: "6",
+    [TOKEN_SYMBOLS.Zely]: "6",
 };
 
 export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
@@ -202,6 +209,7 @@ export const TOKEN_HREF: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.IIIA]: "https://t.me/c/1802432571/571",
     [TOKEN_SYMBOLS.TolW]: "https://t.me/c/1802432571/661",
     [TOKEN_SYMBOLS.WeBi]: "https://wandb.ai/site",
+    [TOKEN_SYMBOLS.Zely]: "https://zealy.io/",
 };
 
 export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
@@ -226,4 +234,5 @@ export const TOKEN_TITLE: { [key in TOKEN_SYMBOLS]: string } = {
     [TOKEN_SYMBOLS.IIIA]: "Web3Auth",
     [TOKEN_SYMBOLS.TolW]: "Tollan Worlds",
     [TOKEN_SYMBOLS.WeBi]: "WeightsBiases",
+    [TOKEN_SYMBOLS.Zely]: "Zealy",
 };
